@@ -1,0 +1,935 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/*
+font-family: 'Archivo', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+html{
+    font-size: 10px;
+}
+body{
+    font-family: 'Archivo', sans-serif;
+}
+.clear{
+    clear: both;
+}
+.widthCont{
+    max-width: 1366px;
+    margin: 0 auto;
+}
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+/*Navigation bar*/
+
+#mainNav{
+    padding: 4.5rem;
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+#mainNav img{
+    max-width: 20.5rem;
+    float: left;
+    margin-left: 10rem;
+}
+.box{
+    float: right;
+    width: 26rem;
+    margin-top: 2.7rem;
+    position: relative;
+}
+.box h2{
+    font-size: 2rem;
+}
+.tourBox{
+    margin-right: 14rem;
+}
+.destBox{
+    margin-right: 1.6rem;
+}
+.dropdown{
+    margin-top: 16px;
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+    font-weight: normal;
+}
+.dropdown button{
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 1.4rem;
+    margin-top: 0.6rem;
+}
+.arrow{
+    background: url('../assets/icons/noun_Arrow_2335640.svg');
+    background-size: cover;
+    float: right;
+    width: 1.6rem;
+    height: 1rem;
+    opacity: 0.3;
+    margin-top: 0.4rem;
+}
+.dropdownContent{
+    max-width: 90%;
+    max-height: 20rem;
+    overflow: auto;
+    padding: 5%;
+    display: none;
+    position: absolute;
+    top: 3.5rem;
+    background: #5041FF;
+    width: 100%;
+    z-index: 3;
+    text-transform: capitalize;
+}
+.dropdownContent a{
+    color: #F1FF4B;
+    font-family: 'Archivo', sans-serif;
+    font-size: 2rem;
+    line-height: 4.6rem;
+    text-decoration: none;
+    display: block;
+    border-bottom: 0.1rem solid #F1FF4B;
+}
+
+
+
+
+/*Header*/
+
+#mainHead{
+    max-width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-transform: uppercase;
+    position: relative;
+}
+#mainHead.maastricht{
+    background-image: url('../assets/maastricht.jpg');
+}
+#mainHead.aachen{
+    background-image: url('../assets/aachen.jpg');
+}
+#mainHead.londen{
+    background-image: url('../assets/londen.jpg');
+}
+#mainHead.lissabon{
+    background-image: url('../assets/lissabon.jpg');
+}
+#mainHead.lentjheuvel{
+    background-image: url('../assets/lentjheuvel.jpg');
+}
+#mainHead.rotjeknor{
+    background-image: url('../assets/rotterdam.jpg');
+}
+#mainHead.dublin{
+    background-image: url('../assets/dublin.jpg');
+}
+#mainHead div{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+#mainHead h1{
+    font-size: 16rem;
+    color: white;
+}
+
+
+
+
+/*Pick your guide*/
+#guide{
+    width: 976px;
+    margin: 0 auto;
+    position: relative;
+}
+#guideBox{
+    width: 930px;
+    position: absolute;
+    left: -15px;
+    top: -170px;
+    z-index: 5;
+}
+#bookGuide{
+    background: black;
+    width: fit-content;
+}
+#bookGuide h2{
+    color: white;
+    font-size: 2rem;
+    padding: 2.4rem;
+}
+#bookGuide h2 span{
+    text-transform: capitalize;
+}
+#guideContent{
+    background: white;
+    padding: 47px 36px;
+    width: 100%;
+}
+.contentGuide{
+    width: 260px;
+    font-size: 1.4rem;
+    position: relative;
+}
+#dateBox{
+    float: left;
+}
+#timeBox{
+    float: left;
+    margin-left: 5.6rem;
+}
+#timeBox h2{
+    float: left;
+    margin-top: 1.6rem;
+}
+#clock{
+    background: url('../assets/icons/noun_clock_4237431.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3rem;
+    height: 3rem;
+    float: right;
+    margin-top: 1.3rem;
+}
+#timeDropdown{
+    max-width: 100%;
+    max-height: 20rem;
+    overflow: auto;
+    padding: 5%;
+    display: none;
+    position: absolute;
+    top: 3.4rem;
+    left: 0;
+    background: #5041FF;
+    width: 100%;
+    z-index: 3;
+}
+#timeDropdown a{
+    color: #F1FF4B;
+    font-family: 'Archivo', sans-serif;
+    font-size: 2rem;
+    line-height: 4.6rem;
+    text-decoration: none;
+    display: block;
+    border-bottom: 0.1rem solid #F1FF4B;
+}
+.contentGuide button span{
+    opacity: 0.3;
+}
+.contentGuide button{
+    text-align: left;
+}
+.contentGuide button h2{
+    font-family: 'Archivo', sans-serif;
+    font-size: 2rem;
+    opacity: 1;
+}
+.line{
+    height: 2px;
+    width: 260px;
+    background: black;
+    opacity: 0.1;
+    margin-top: 18px;
+}
+
+#findGuideBox{
+    float: right;
+}
+#findGuideBox button{
+    background: #5041FF;
+    color: white;
+    font-family: 'Archivo', sans-serif;
+    font-size: 2rem;
+    padding: 2.4rem;
+    border-radius: 10px;
+    margin-left: 1.2rem;
+}
+#findGuideBox p{
+    font-size: 1.4rem;
+    opacity: 0.3;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 1rem;
+}
+
+.ui-widget-content{
+    background: #5041FF;
+    color: #F1FF4B;
+}
+.ui-widget{
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.5rem;
+}
+.ui-corner-all{
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+.ui-widget-header{
+    background: #5041FF;
+    color: #F1FF4B;
+    border: none;
+    border-bottom: #F1FF4B 2px solid;
+}
+.ui-icon, .ui-widget-content .ui-icon{
+    background: url('../assets/icons/arrow-yellow.svg');
+    background-repeat: no-repeat;
+}
+.ui-icon{
+    width: 2rem;
+}
+.ui-datepicker .ui-datepicker-prev span{
+    margin-top: -6px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default{
+    background: #F1FF4B;
+    color: black;
+    border: #F1FF4B 2px solid;
+}
+#datepicker{
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.5rem;
+}
+#dateBox input{
+    border: none;
+    margin-top: 1.6rem;
+    float: left;
+    cursor: pointer;
+}
+#calender{
+    background: url('../assets/icons/noun_calender_863471.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3rem;
+    height: 3rem;
+    float: right;
+    margin-top: 1.3rem;
+}
+
+/*We found a guide*/
+#foundGuide{
+    max-width: 727px;
+    position: fixed;
+    left: 50%;
+    top: 25%;
+    background: #5041FF;
+    border: black solid 4px;
+    padding: 32px;
+    border-radius: 10px;
+    display: none;
+    z-index: 5;
+}
+#logoBox{
+    max-width: 205px;
+    margin: 0 auto;
+}
+#logoYellow{
+    width: 100%;
+    max-height: 90px;
+}
+#foundTextBox{
+    max-width: 656px;
+    margin: 0 auto;
+    margin-top: 6rem;
+}
+#foundTextBox h2{
+    color: #F1FF4B;
+    font-size: 5rem;
+    text-transform: uppercase;
+    max-width: 262px;
+    text-align: right;
+    float: left;
+}
+#foundTextBox p{
+    color: #F1FF4B;
+    font-size: 2.1rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 3.4rem;
+    max-width: 354px;
+    float: right
+}
+.guideGuide{
+    border: white solid 4px;
+    border-radius: 10px;
+    padding: 0;
+    margin-top: 3rem;
+}
+.guideGuide img{
+    max-width: 136px;
+    float: left;
+}
+.guideGuide p{
+    color: white;
+    text-align: left;
+}
+.btnTextBox{
+    float: left;
+    margin-top: 4rem;
+    margin-left: 2rem;
+    padding-right: 3rem;
+}
+.name{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.exp{
+    margin-top: 0.7rem;
+}
+/* #guideSlide .slick-slide {
+    height:136px;
+    width: 400px;
+ } */
+ .slick-slide{
+    max-width: 400px !important;
+ }
+#background{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    display: none;
+}
+
+
+
+
+
+
+/*Section Yellow*/
+#yellow{
+    background: #F1FF4B;
+    padding: 8rem;
+}
+#yellowWidth{
+    max-width: fit-content;
+    margin: 0 auto;
+    margin-top: 6rem;
+}
+#yellow h2{
+    font-size: 5rem;
+    text-align: right;
+    line-height: 4.6rem; 
+}
+#yellow #titleBox{
+    max-width: 352px;
+    text-transform: uppercase;
+    float: left;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+#yellow #textBox{
+    max-width: 444px;
+    float: left;
+    margin-left: 4rem;
+}
+#yellow p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.1rem;
+    line-height: 3.4rem;
+}
+#path1Box{
+    max-width: 420px;
+    margin: 0 auto;
+    position: relative;
+}
+#path1{
+    background: url('../assets/Path\ 7.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -50px;
+    left: 10%;
+    width: 100%;
+    height: 350px;
+}
+
+
+
+
+/*Main*/
+/*Slider section*/
+main{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+#mainSlider{
+    margin-top: 100px;
+    max-width: 90%;
+    margin-left: 10%;
+    padding-bottom: 200px;
+}
+main h4{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+main h3{
+    font-size: 6rem;
+    color: #5041FF;
+    text-transform: uppercase;
+    line-height: 6rem;
+    padding-bottom: 7rem;
+}
+.slick-slide{
+    max-width: 350px;
+    max-height: 350px;
+    padding-right: 2rem;
+    object-fit: contain;
+}
+.sliderContent{
+    border-radius: 20px;
+    height: 350px
+}
+#content1{
+    background: url('../assets/Slider/giu-vicente-c5UCzwjpQzY-unsplash.jpg');
+    background-size: cover;
+}
+#content2{
+    background: url('../assets/Slider/giu-vicente-eLhBzh160Lo-unsplash.jpg');
+    background-size: cover;
+}
+#content3{
+    background: url('../assets/Slider/hugo-lijzen-fBuHIaZbhEg-unsplash.jpg');
+    background-size: cover;
+}
+#content4{
+    background: url('../assets/Slider/jean-carlo-emer-6Mx5UMHtKO4-unsplash.jpg');
+    background-size: cover;
+}
+#content5{
+    background: url('../assets/Slider/matti-tanskanen-Z1gi3JzZ7go-unsplash.jpg');
+    background-size: cover;
+}
+
+
+#path2Box{
+    max-width: 420px;
+    margin: 0 auto;
+    position: relative;
+}
+#path2{
+    background: url('../assets/Path\ 11.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -80px;
+    right: -160px;
+    width: 100%;
+    height: 250px;
+}
+
+
+
+
+/*Video Player*/
+#playerTextBox{
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+#playerTextBox h2{
+    text-transform: uppercase;
+    font-size: 5rem;
+}
+#playerTextBox h4{
+    padding-top: 4rem;
+}
+
+
+#videoPlayer{
+    max-width: 1029px;
+    margin: 0 auto;
+    padding-top: 3rem;
+    position: relative;
+}
+#videoPlayer video{
+    width: 95%;
+}
+#videoFastForward{
+    background: url('../assets/icons/FastForward.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 8.8rem;
+    height: 8.8rem;
+    position: absolute;
+    right: 0;
+    top: calc(50% - 4.4rem)
+}
+#videoPlayerBtns{
+    padding-top: 5rem;
+    max-width: 1081px;
+    margin: 0 auto;
+}
+#videoPlayerBtns button{
+    width: 254px;
+    padding: 2.4rem;
+    border: solid 5px #5041FF;
+    color: #5041FF;
+    font-family: 'Archivo', sans-serif;
+    font-size: 2rem;
+    border-radius: 10px;
+    margin-right: 1.9rem;
+}
+.play{
+    background: url('../assets/icons/Play.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    height: 22px;
+    float: right;
+}
+.pause{
+    background: url('../assets/icons/Pause.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    height: 22px;
+    float: right; 
+}
+#videoPlayerBtns button#videoBtn4{
+    margin-right: 0rem;
+}
+
+
+/*Footer*/
+#mainFooter{
+    background: black;
+    width: 100%;
+    margin-top: 114px;
+}
+#footerCont{
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 7rem;
+}
+#mainFooter h4{
+    font-size: 2rem;
+    color: white;
+}
+#mainFooter h3{
+    font-size: 6rem;
+    color: white;
+    float: left;
+}
+#footerTextBox{
+    width: fit-content;
+}
+#icon{
+    background: url('../assets/icons/icon-white.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 5rem;
+    height: 5.5rem;
+    float: left;
+    margin-left: 2rem;
+}
+#mainFooter button{
+    color: white;
+    font-size: 2rem;
+    font-family: 'Archivo', sans-serif;
+    padding: 24px;
+    border-radius: 2rem;
+    margin-top: 50px;
+}
+#phoneBtn{
+    border: solid white 3px;
+    margin-right: 1rem;
+}
+#phone{
+    background: url('../assets/icons/phone-white.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 2.2rem;
+    height: 2.2rem;
+    float: left;
+    padding-right: 1rem;
+}
+#mailBtn{
+    background: #5041FF;
+    border: #5041FF 3px solid;
+}
+
+
+
+
+
+
+
+/*Media querys large to small*/
+@media screen and (max-width: 1800px){
+    #foundGuide{
+        left: 25%;
+    }
+}
+@media screen and (max-width: 1600px){
+    #foundGuide{
+        left: 23%;
+    }
+}
+@media screen and (max-width: 1500px){
+    #foundGuide{
+        left: 23%;
+    }
+}
+@media screen and (max-width: 1400px){
+    #foundGuide{
+        left: 18%;
+    }
+}
+@media screen and (max-width: 1300px){
+    #mainHead h1{
+        font-size: 12rem;
+    }
+}
+@media screen and (max-width: 1200px){
+    #foundGuide{
+        left: 13%;
+    }
+}
+@media screen and (max-width: 1160px){
+    .box{
+        width: 20rem;
+    }
+    #yellow h2{
+        font-size: 4rem;
+    }
+    #yellow p{
+        font-size: 1.8rem;
+        line-height: 3.1rem;
+    }
+    #videoPlayerBtns{
+        max-width: 530px;
+    }
+    #videoPlayerBtns button#videoBtn2{
+        margin-right: 0rem;
+    }
+    #videoBtn1{
+        margin-bottom: 2rem;
+    }
+}
+@media screen and (max-width: 1010px){
+    .tourBox{
+        margin-right: 7rem;
+    }
+    #yellow #titleBox{
+        max-width: 100%;
+        float: none;
+        margin-left: 0rem;
+        padding-bottom: 1rem;
+    }
+    #yellow h2{
+        text-align: center;
+    }
+    #yellow #textBox{
+        max-width: 80%;
+        float: none;
+        margin-left: 0rem;
+        margin: 0 auto;
+    }
+    #yellow p{
+        text-align: center;
+    }
+    #findGuideBox{
+        float: none;
+        margin-top: 3rem;
+        margin-left: 30%;
+    }
+    #timeBox{
+        float: right;
+        margin-left: 0rem;
+        margin-right: 1rem;
+    }
+    #guide{
+        max-width: 600px;
+    }
+    #guideBox{
+        width: 100%;
+    }
+    #guideClear{
+        clear: both;
+    }
+    #yellowWidth{
+        margin-top: 16rem;
+    }
+    #foundGuide{
+        left: 8%;
+    }
+}
+@media screen and (max-width: 930px){
+    .tourBox{
+        margin-right: 4rem;
+    }
+    #mainHead h1{
+        font-size: 10rem;
+    }
+}
+@media screen and (max-width: 880px){
+    .tourBox{
+        margin-right: 0rem;
+    }
+    #foundGuide{
+        max-width: 500px;
+        left: 19%;
+        top: 20%;
+    }
+    #foundTextBox h2{
+        max-width: 100%;
+        text-align: center;
+    }
+    #foundTextBox p{
+        max-width: 100%;
+        text-align: center;
+    }
+    .exp{
+        padding-bottom: 2rem;
+    }
+}
+@media screen and (max-width: 850px){
+    .tourBox{
+        margin-right: 3rem;
+    }
+    .destBox{
+        margin-right: 3rem;
+    }
+    #mainNav img{
+        margin-top: 4.5rem;
+        padding-right: 3rem;
+    }
+    #mainHead div{
+        top: 20%;
+    }
+    #mainHead h1{
+        font-size: 8rem;
+    }
+}
+@media screen and (max-width: 720px){
+    #guide{
+        max-width: 300px;
+    }
+    #timeBox{
+        float: left;
+        margin-top: 3rem;
+    }
+    #findGuideBox{
+        margin-left: 10%;
+    }
+    #yellowWidth{
+        margin-top: 28rem;
+    }
+    #bookGuide h2{
+        line-height: 2.6rem;
+    }
+    #foundGuide{
+        left: 9%;
+    }
+    #path1{
+        background: none;
+    }
+    #path2{
+        background: none;
+    }
+}
+@media screen and (max-width: 655px){
+    .tourBox{
+        float: none;
+        margin-left: 30%;
+    }
+    .destBox{
+        float: none;
+        margin-left: 30%;
+    }
+    .box{
+        display: block;
+    }
+    #mainNav img{
+        margin-top: 2rem;
+        padding-bottom: 0rem;
+        margin-left: 30%;
+    }
+    .imgclear{
+        clear: both;
+    }
+    #mainHead h1{
+        font-size: 5rem;
+    }
+    #foundGuide{
+        max-width: 90%;
+        left: 0%;
+    }
+}
+@media screen and (max-width: 600px){
+    #yellow h2{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    #yellow p{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    #videoPlayerBtns{
+        max-width: 254px;
+    }
+    #videoPlayerBtns button{
+        margin-right: 0rem;
+    }
+    #videoPlayerBtns button#videoBtn2{
+        margin-right: 0rem;
+        margin-bottom: 2rem;
+    }
+    #videoPlayerBtns button#videoBtn4{
+        margin-right: 0rem;
+        margin-top: 2rem;
+    }
+
+}
+@media screen and (max-width: 550px){
+    main h3{
+        font-size: 4rem;
+    }
+    main h4{
+        font-size: 1.5rem;
+        padding-bottom: 0.1rem;
+    }
+}
+@media screen and (max-width: 450px){
+    .box{
+        width: 100%;
+    }
+    .tourBox{
+        float: none;
+        margin-left: 0rem;
+    }
+    .destBox{
+        float: none;
+        margin-left: 0rem;
+    }
+    #mainNav img{
+        margin-top: 0rem;
+        padding-bottom: 0rem;
+        margin-left: 10%;
+        width: 80%;
+    }
+    #mainHead h1{
+        font-size: 4rem;
+    }
+}

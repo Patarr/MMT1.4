@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!--Slick Slider CSS-->
+    <link rel="stylesheet"  href="plugin/slick/slick.css"/>
+    <link rel="stylesheet"  href="plugin/slick/slick-theme.css"/>
+    <!--DatePicker jQuery UI CSS-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--Navigation bar-->
+    <nav id="mainNav">
+        <div class="widthCont">
+            <img src="assets/logo.png" alt="Logo Mister Guide">
+            <div class="imgclear"></div>
+            
+            <!--Featured Tours-->
+            <div class="box tourBox">
+                <h2>Featured Tours</h2>
+                <div class="dropdown">
+                    <button id="tourBtn">Browse By Type <span class="arrow"></span></button>
+                    <div class="clear"></div>
+    
+                    <div class="dropdownContent dropdownTour">
+                        <a href="#">guided tour</a>
+                        <a href="#">group tour</a>
+                        <a href="#">couples</a>
+                        <a href="#">audio tours</a>
+                        <a href="#">boat tours</a>
+                        <a href="#">will tour</a>
+                        <a href="#">vincent tour</a>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <!--Destinations-->
+            <div class="box destBox">
+                <h2>Destinations</h2>
+                <div class="dropdown">
+                    <button id="destBtn">Browse By Location <span class="arrow"></span></button>
+                    <div class="clear"></div>
+    
+                    <div class="dropdownContent dropdownDest">
+                        <a href="#">maastricht</a>
+                        <a href="#">aachen</a>
+                        <a href="#">londen</a>
+                        <a href="#">lissabon</a>
+                        <a href="#">lentjheuvel</a>
+                        <a href="#">rotjeknor</a>
+                        <a href="#">dublin</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="clear"></div>
+
+        </div>
+    </nav>
+
+    <!--Header-->
+    <header id="mainHead" class="maastricht">
+        <div>
+            <h1>Maastricht</h1>
+        </div>
+    </header>
+
+    <!--Pick your guide-->
+    <section id="guide">
+        <div id="guideBox">
+            <div id="bookGuide">
+                <h2>Book a guide in <span> Maastricht</span></h2>
+            </div>
+            <div id="guideContent">
+                <div id="dateBox" class="contentGuide">
+                    <button ><span> Date</span>
+                        <div class="line"></div>
+                    
+
+                        <p><input type="text" id="datepicker" value="Pick your date"></p>
+                        <div id="calender"></div>
+                    </button>
+                    
+                </div>
+
+
+
+
+                <div id="timeBox" class="contentGuide">
+                    <button id="timeBtn"><span> Starting Time</span>
+                        <div class="line"></div>
+                        <h2></h2>
+                        <div id="clock"></div>
+                    </button>
+
+                    <div class="clear"></div>
+
+                        <div id="timeDropdown">
+                            <a href="#">8:00</a>
+                            <a href="#">9:00</a>
+                            <a href="#">10:00</a>
+                            <a href="#">11:00</a>
+                            <a href="#">12:00</a>
+                            <a href="#">13:00</a>
+                            <a href="#">14:00</a>
+                            <a href="#">15:00</a>
+                            <a href="#">16:00</a>
+                            <a href="#">17:00</a>
+                            <a href="#">18:00</a>
+                        </div>
+                </div>
+
+                <div id="guideClear"></div>
+
+                <div id="findGuideBox">
+                    <button>Find your guide</button>
+                    <p>We'll choose the best match for you</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+                <!--Found guide pop-up-->
+                <div id="background"></div>
+                <div id="foundGuide">
+                    <div id="logoBox">
+                        <img id="logoYellow" src="assets/logo-yelow.png" alt="Logo Mister Guide">
+                    </div>
+
+                    <div id="foundTextBox">
+                        <h2>we found a match!</h2>
+                        <p>We fount the perfect guides for your city! 
+                            Best yet, the guides are available for 
+                            you at your time. 
+                            Let's get you in touch now.</p>
+                            <div class="clear"></div>
+                    </div>
+
+                    <!--Guide Slick Slide-->
+                    <div id="guideSlide" class="guideSlickSlide">
+
+                        <div class="guideSlideContent">
+                        <button class="guideGuide">
+                            <img src="assets/image.jpg" alt="Guide male">
+                            <div class="btnTextBox">
+                                <p class="name">Hugo Marcus</p>
+                                <p class="exp">+6 years tour guide experience</p>
+                            </div>
+                            <div class="clear"></div>
+                        </button>
+                    </div>
+
+                    <div class="guideSlideContent">
+                        <button class="guideGuide">
+                            <img src="assets/image-1.jpg" alt="Guide female">
+                            <div class="btnTextBox">
+                                <p class="name">Maria Miosa</p>
+                                <p class="exp">+7 years tour guide experience</p>
+                            </div>
+                            <div class="clear"></div>
+                        </button>
+                    </div>
+
+                    </div>
+                </div>
+
+
+
+        </div>
+    </section>
+
+    <!--Yellow Section-->
+    <section id="yellow">
+        <div id="yellowWidth">
+            <div id="titleBox">
+                <h2>start exploring everyday</h2>
+            </div>
+            <div id="textBox">
+                <p>Mister guide offers a great way to tour a city. 
+                    Book a guide right now Aenean lacinia bibendum nulla sed consectetur. 
+                    Nulla vitae elit libero, a pharetra augue. 
+                    Maecenas faucibus mollis interdum.</p>
+            </div>
+            <div class="clear"></div>
+
+                <div id="path1Box">
+                    <div id="path1"></div>
+                </div>
+        </div>
+    </section>
+
+    <!--Main-->
+    <main>
+        <div id="mainSlider">
+            <h4>Looking for a guided tour? Sight seeing in</h4>
+            <h3>Maastricht</h3>
+
+            <!--Slick Slider-->
+            <div class="responsiveSlider">
+                <div class="sliderContent" id="content1"></div>
+                <div class="sliderContent" id="content2"></div>
+                <div class="sliderContent" id="content3"></div>
+                <div class="sliderContent" id="content4"></div>
+                <div class="sliderContent" id="content5"></div>
+            </div>
+
+            <div id="path2Box">
+                <div id="path2"></div>
+            </div>
+
+        </div>
+
+
+        <!--Video Player-->
+        <div id="playerTextBox">
+            <h2>Look at all those happy smiles</h2>
+            <h4>Follow Mister Guide around the globe</h4>
+        </div>
+
+        <div id="videoPlayer">
+            <video id="videoScreen">
+                <source src="assets/video/city1.mp4" type="video/mp4">
+            </video>
+            <button id="videoFastForward"></button>
+        </div>
+
+        <div id="videoPlayerBtns">
+            <button id="videoBtn1">Maastricht <div class="play"></div></button>
+            <button id="videoBtn2">Aachen <div class="play"></div></button>
+            <button id="videoBtn3">New York <div class="play"></div></button>
+            <button id="videoBtn4">Lentjheuvel <div class="play"></div></button>
+            <div class="clear"></div>
+        </div>
+
+    </main>
+
+    <!--Footer-->
+    <footer id="mainFooter">
+
+            <div id="footerCont">
+                <div id="footerTextBox">
+                    <h4>Need some help finding the perfect tour?</h4>
+
+                    <h3>Contact Mr. Guide </h3>
+                    <div id="icon"></div>
+        
+                    <div class="clear"></div>
+                </div>
+        
+                <button id="phoneBtn"><div id="phone"></div>9100-555-555</button>
+                <button id="mailBtn">Send us a mail</button>
+
+                <div class="clear"></div>
+            </div>
+    </footer>
+    
+    <!--Link jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--Link for Slick Slider-->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="plugin/slick/slick.min.js"></script>
+    <!--Link jQuery UI-->
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- Link JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
